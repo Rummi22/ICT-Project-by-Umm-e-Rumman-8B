@@ -1,0 +1,176 @@
+* {
+   margin: 0px;
+   padding: 0px;
+   box-sizing: border-box;
+}
+
+#navbar {
+    background-color: rgb(250, 237, 205);
+    height: 60px;
+    width: 100%;
+    border: 10px;
+    border-color: rgb(67, 40, 24);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-sizing: border-box; 
+}
+ #logo {
+   background-color:rgb(250, 237, 205);
+   margin-left: 50px;
+   margin-right: 150px;
+   text-align: center;
+    font-size: 25px;
+    color: rgb(67, 40, 24);
+    font-family:  playfair display; 
+ }
+
+ #navt
+  {
+   display: inline-block;
+   margin-left: 30px;
+   margin-right: 2px;
+   color: rgb(67, 40, 24);
+   font-size: 15px;
+   background-color:rgb(250, 237, 205);
+   font-family: cursive;
+
+ }
+
+ .nword {
+    margin-right: 10px;
+    background-color: rgb(250, 237, 205);
+ }
+
+
+ button {
+    background-color: rgb(67, 40, 24);
+    color: aliceblue;
+    width: 110px;
+    height: 25px;
+    border: 5px;
+    border-color: aliceblue;
+    border-radius: 50px;
+    font-family: cursive;
+ }
+
+ .sbar {
+    width: 600px;
+    height: 25px;
+    outline: none;
+    border: 3px;
+    border-color: rgb(148, 119, 103);
+    border-radius: 50px;
+    background-color: aliceblue;
+    color: rgb(148, 119, 103);
+    font-family: cursive;
+    text-align: center;
+    font-size: 15px;
+ }
+
+ img {
+   width: 100%;
+   border-top-right-radius: 20px;
+   border-top-left-radius: 20px;
+   background-color: rgb(247, 225, 215);
+ }
+
+#h3a {
+   font-size: 50px;
+   font-family: playfair display;
+   text-align: center;
+   color: rgb(67, 40, 24);
+}
+
+#p1 {
+   color: rgb(67, 40, 24);
+   font-family: cursive;
+   font-size: 20px;
+   text-align: center;
+}
+
+   #contentpics {
+   display: grid;
+   width: 100%;
+   margin: 40px auto;
+   padding: 20px;
+   border-radius: 20px;
+   gap: 30px; 
+   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+   justify-items: center;
+    }
+    
+   
+  
+h5 {
+   background-color:rgb(247, 225, 215);
+   font-family: dedos;
+   font-size: 18px;
+   color: rgb(67, 40, 24);
+}
+
+.picimg {
+   width: 200px;
+   height: 200px;
+   border-radius: 20px;
+}
+
+
+.item h5 {
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+  margin-top: 8px;
+  font-size: 16px;
+  color: rgb(67, 40, 24);
+  font-family: dedos;
+}
+
+.item {
+  width: 200px;        
+  text-align: center;
+}
+
+footer {
+   background-color: rgb(67, 40, 24);
+   width: 100%;
+   padding: 70px 30px 20px;
+  margin-top: 40px;
+  clear: both;
+   color: aliceblue; 
+   text-align: center;
+}
+
+
+footer * {
+   background-color: transparent;
+}
+
+footer h3, footer p, footer a {
+   color: aliceblue;
+   margin: 20px;
+   text-decoration: none;
+   font-size: 25px;
+   opacity: 0.8;
+   transition: 0.3s;
+}
+
+footer a:hover {
+   opacity: 1;
+}
+
+body {
+   padding-top: 60px;
+   background-color: rgb(250, 237, 205);
+}
+
+footer p {
+   font-family: cursive;
+}
+
+
+
+      
