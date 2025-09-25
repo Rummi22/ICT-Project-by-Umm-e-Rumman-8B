@@ -16,6 +16,10 @@
     right: 0;
     z-index: 1000;
     box-sizing: border-box; 
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 16px;
 }
  #logo {
    background-color:rgb(250, 237, 205);
@@ -25,23 +29,58 @@
     font-size: 25px;
     color: rgb(67, 40, 24);
     font-family:  playfair display; 
+    text-decoration: none;
  }
 
  #navt
   {
-   display: inline-block;
+   display: flex;
+   align-items: center;
+   gap: 12px;
    margin-left: 30px;
    margin-right: 2px;
    color: rgb(67, 40, 24);
    font-size: 15px;
    background-color:rgb(250, 237, 205);
    font-family: cursive;
+   text-decoration: none;
 
+ }
+
+ /* Normalize link styles in navbar */
+ #navt a,
+ #navt a:link,
+ #navt a:visited,
+ #navt a:hover,
+ #navt a:active {
+   color: rgb(67, 40, 24);
+   text-decoration: none;
+ }
+
+ /* Optional: slight hover feedback without underline */
+ #navt a:hover {
+   opacity: 0.8;
+ }
+
+ #cart {
+   display: flex;
+   align-items: center;
+   gap: 6px;
+ }
+
+ .carticon {
+   display: inline-block;
+ }
+
+ #cart-count {
+   font-weight: 600;
  }
 
  .nword {
     margin-right: 10px;
     background-color: rgb(250, 237, 205);
+    color: rgb(67, 40, 24);
+    text-decoration: none;
  }
 
 
@@ -105,7 +144,7 @@
    
   
 h5 {
-   background-color:rgb(247, 225, 215);
+   background-color: transparent;
    font-family: dedos;
    font-size: 18px;
    color: rgb(67, 40, 24);
@@ -115,6 +154,7 @@ h5 {
    width: 200px;
    height: 200px;
    border-radius: 20px;
+   display: inline;
 }
 
 
@@ -123,7 +163,7 @@ h5 {
   padding: 10px;
   border-radius: 10px;
   width: 100%;
-  margin-top: 8px;
+  margin: 8px 0 0;
   font-size: 16px;
   color: rgb(67, 40, 24);
   font-family: dedos;
@@ -132,6 +172,26 @@ h5 {
 .item {
   width: 200px;        
   text-align: center;
+  background-color: rgb(247, 225, 215);
+  padding: 12px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  box-sizing: border-box;
+}
+
+.item button {
+  width: 100%;
+  height: 32px;
+}
+
+.price {
+  font-family: cursive;
+  color: rgb(67, 40, 24);
+  font-weight: 600;
+  margin: 0;
 }
 
 footer {
@@ -169,6 +229,184 @@ body {
 
 footer p {
    font-family: cursive;
+}
+
+footer hr p {
+   font-family: playfair display;
+}
+
+#carttab {
+   width: 400px;
+   background-color: rgb(67, 40, 24);
+   color: aliceblue;
+   position: fixed;
+   inset: 0 -400px 0 auto;
+   display: grid;
+   grid-template-rows: 70px 1fr 70px;
+   z-index: 1100; 
+   box-shadow: -8px 0 20px rgba(0,0,0,0.2);
+   transition: inset 0.3s ease; 
+ }
+
+ #carttab h1 {
+   padding: 20px;
+   margin: 0;
+   font-weight: 300;
+   text-align: center;
+   font-family: cursive;
+}
+
+#cartbuttons {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 12px;
+   padding: 0 20px;
+}
+
+#cartbuttons button {
+background-color: aliceblue;
+color: rgb(67, 40, 24);
+border: none;
+font-family: cursive;
+font-weight: 500;
+}
+
+#carttab #cartitems .image {
+ width: 100%;
+}
+
+
+#carttab .image {
+  width: 70px;
+}
+
+#carttab .image img {
+  width: 70px; 
+  height: 70px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+#carttab #cartitems {
+   display: grid;
+   grid-template-columns: 70px 1fr 80px 120px;
+   gap: 10px;
+   text-align: center;
+   align-items: center;
+   padding: 10px 20px;
+   box-sizing: border-box;
+   align-content: start; 
+}
+
+/* Align name text to left for readability */
+#carttab .name {
+  text-align: left;
+}
+
+#cartitems .quantity {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  flex-wrap: wrap; /* allow the Remove button to wrap to the next line */
+}
+
+#cartitems .quantity span {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   height: 20px;
+   width: 20px;
+   background-color: aliceblue;
+   color: rgb(67, 40, 24);
+   border-radius: 999px;
+   cursor: pointer;
+   font-weight: 700;
+   user-select: none;
+   border: 1px solid rgba(67, 40, 24, 0.15);
+   box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+   transition: transform 0.05s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+   margin: 0 4px;
+   flex: 0 0 auto; /* keep each control sized and on the same row */
+}
+
+#carttab span {
+  color: rgb(67, 40, 24);
+}
+
+#carttab .quantity .count {
+   background-color: transparent;
+   color: aliceblue;
+   cursor: default;
+   border: none;
+   box-shadow: none;
+   font-weight: 700;
+   min-width: 18px;
+   text-align: center;
+   height: auto;   /* do not force circular size on the count */
+   width: auto;
+}
+
+/* Hover/active/focus states for quantity buttons (minus/plus) */
+#cartitems .quantity .minus:hover,
+#cartitems .quantity .plus:hover {
+  background-color: #f0f4ff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.12);
+  height: 20px;
+  width: 20px;
+}
+
+#cartitems .quantity .minus:active,
+#cartitems .quantity .plus:active {
+  transform: scale(0.96);
+  height: 20px;
+  width: 20px;
+}
+
+#cartitems .quantity .minus:focus,
+#cartitems .quantity .plus:focus {
+  outline: 2px solid rgba(255,255,255,0.6);
+  outline-offset: 2px;
+}
+
+/* Inline price styling next to product name in cart */
+#carttab .name .name-price {
+  display: block;
+  margin-top: 4px;
+  margin-left: 0;
+  font-size: 14px;
+  font-weight: 600;
+  opacity: 1;
+  color: #ffe8c6;
+}
+
+#cartitems .quantity button {
+  display: block;           /* make it look like a block below */
+  width: auto;
+  margin: 6px 4px 0;
+  height: 28px;
+  padding: 0 10px;
+  flex-basis: 100%;         /* forces the button to the next line within the flex container */
+  align-self: flex-start;   /* align to the left under the controls */
+}
+
+#carttab .cartitems:nth-child(even) {
+background-color: aliceblue;
+
+}
+
+#carttab {
+   overflow: auto;
+}
+
+#carttab::-webkit-scrollbar {
+   width: 0;
+}
+
+/* Utility: used by JS search filter to hide non-matching products */
+.hide {
+   display: none !important;
 }
 
 
